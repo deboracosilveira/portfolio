@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+:root {
+  --black: #000000;
+  --grayHeavy: #494848;
+  --grayLight: #f0f0f0;
+  --grayMedium: #f4f3f3;
+  --white: #ffffff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* a {
+  color: inherit;
+} */
