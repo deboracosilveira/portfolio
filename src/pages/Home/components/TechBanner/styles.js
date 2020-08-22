@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { BackgroundBox } from '../../../../BackgroundBox/BackgroundBox';
-import { Button } from '../../../../Button/Button';
+import { BackgroundBox, Button } from '../../../../components';
 
 export const TechBannerContainer = styled.section`
   display: flex;
@@ -60,16 +59,16 @@ TechBox.Button = styled(Button)`
 
 export const TechBannerBackgroundBox = styled.div`
   background-color: var(--grayMedium);
-  width: 35vw;
   height: 35vw;
-  position: relative;
   left: 15%;
+  position: relative;
+  width: 35vw;
 
   @media (max-width: 800px) {
-    left: 20%;
-    width: 70vw;
     height: 70vw;
+    left: 20%;
     margin: 10% 0;
+    width: 70vw;
   }
 `;
 

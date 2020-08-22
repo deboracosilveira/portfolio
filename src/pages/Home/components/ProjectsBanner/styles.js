@@ -1,16 +1,15 @@
 import styled from 'styled-components';
-import { Button } from '../../../../Button/Button';
+import { Button } from '../../../../components';
 
 export const ProjectsContainer = styled.section`
   display: flex;
+  height: 45vw;
   justify-content: center;
   margin-bottom: 15%;
 
-  height: 45vw;
-
   @media (max-width: 800px) {
-    margin-bottom: 30%;
     height: 250vw;
+    margin-bottom: 30%;
   }
 `;
 
@@ -18,13 +17,13 @@ ProjectsContainer.Title = styled.p`
   color: var(--grayHeavy);
   font-size: 3.5vw;
   font-weight: 700;
-  text-align: center;
   letter-spacing: 6px;
   margin-bottom: 5%;
+  text-align: center;
 
   @media (max-width: 800px) {
-    margin: 10% 0;
     font-size: 6vw;
+    margin: 10% 0;
   }
 `;
 
@@ -36,8 +35,8 @@ ProjectsContainer.LeftBox = styled.div`
   @media (max-width: 800px) {
     align-self: center;
     height: 100%;
-    width: 90%;
     padding: -40%;
+    width: 90%;
   }
 `;
 
@@ -51,18 +50,18 @@ ProjectsContainer.RightBox = styled(ProjectsContainer.LeftBox)`
 
 ProjectsContainer.Items = styled.div`
   display: flex;
-  position: relative;
-  width: 200%;
   height: 100%;
   justify-content: space-around;
+  position: relative;
+  width: 200%;
 
   @media (max-width: 800px) {
-    display: flex;
-    height: 100%;
-    width: 100%;
     background-color: var(--grayMedium);
+    display: flex;
     flex-direction: column;
+    height: 100%;
     padding: 20px;
+    width: 100%;
   }
 `;
 
@@ -71,16 +70,16 @@ ProjectsContainer.Item1 = styled.img`
   height: 60%;
 
   @media (max-width: 800px) {
+    align-self: center;
     border: 5px solid var(--white);
     height: 30%;
     justify-self: center;
-    align-self: center;
   }
 `;
 
 ProjectsContainer.Item2 = styled(ProjectsContainer.Item1)`
-  left: 40%;
   align-self: center;
+  left: 40%;
 
   @media (max-width: 800px) {
     align-self: center;
@@ -89,8 +88,8 @@ ProjectsContainer.Item2 = styled(ProjectsContainer.Item1)`
 `;
 
 ProjectsContainer.Item3 = styled(ProjectsContainer.Item1)`
-  left: 70%;
   align-self: flex-end;
+  left: 70%;
 
   @media (max-width: 800px) {
     align-self: center;
@@ -99,6 +98,6 @@ ProjectsContainer.Item3 = styled(ProjectsContainer.Item1)`
 `;
 
 ProjectsContainer.Button = styled(Button)`
-  position: relative;
   left: 15%;
+  position: relative;
 `;

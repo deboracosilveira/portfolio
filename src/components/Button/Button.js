@@ -1,20 +1,20 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  width: 12vw;
-  text-align: center;
+  /* display: inline-block; */
   background-color: var(--grayHeavy);
-  color: var(--white);
-  cursor: pointer;
-  padding: 3%;
-  font-weight: 300;
-  font-size: 1.5vw;
   border-radius: 5px;
   border-style: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.5vw;
+  font-weight: 300;
   letter-spacing: 2px;
+  padding: 3%;
+  text-align: center;
   text-decoration: none;
-  /* display: inline-block; */
   transition: opacity 0.3s;
+  width: 12vw;
 
   &:hover,
   &:focus {
@@ -22,7 +22,7 @@ export const Button = styled.button`
   }
 
   @media (max-width: 800px) {
-    width: 30vw;
     font-size: 4vw;
+    width: 30vw;
   }
 `;
