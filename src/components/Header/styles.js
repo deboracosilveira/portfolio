@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
+import { Dropdown } from 'react-bootstrap';
 
 const HeaderContainer = styled.header`
   padding: 20px 80px;
@@ -65,6 +66,27 @@ HeaderContainer.Name = styled.h1`
   @media (max-width: 800px) {
     justify-content: space-between;
   }
+`;
+
+HeaderContainer.Dropdown = styled(Dropdown)``;
+
+HeaderContainer.Dropdown.Toggle = styled(Dropdown.Toggle)`
+  color: var(--grayHeavy);
+  font-size: 35px;
+
+  &:focus {
+    box-shadow: none;
+  }
+`;
+
+HeaderContainer.Dropdown.Item = styled(Dropdown.Item)`
+  font-size: 20px;
+
+  &:active, 
+  :hover {
+    background-color: var(--grayMedium);
+    color: var(--grayHeavy);
+  }  
 `;
 
 export default HeaderContainer;
