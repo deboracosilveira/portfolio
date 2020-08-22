@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+// import { HashLink } from 'react-router-hash-link';
 import { Dropdown } from 'react-bootstrap';
 
 import { useMediaQuery } from 'react-responsive';
 
 import './Header.css';
+import HeaderContainer from './styles';
 
 const Header = () => {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 800px)' });
@@ -13,25 +14,18 @@ const Header = () => {
     query: '(min-width: 800px)',
   });
 
-  const createLink = (path, label) => (
-    <Link to={`/${path}`} className="link">
-      {label}
-    </Link>
-  );
+  // const createLink = (path, label) => (
+  //   <HeaderContainer.Link to={`/${path}`}>{label}</HeaderContainer.Link>
+  // );
 
   const createNavForDesktop = () => (
-    <nav>
-      {createLink('about-me', 'ABOUT ME')}
-      {/* {createLink('#projects', 'PROJECTS')} */}
-      <HashLink to="/#projects" className="link">
-        PROJECTS
-      </HashLink>
-      <h1 className="name-title">DÉBORA SILVEIRA</h1>
-      {createLink('CV', 'CV')}
-      <HashLink to="/#footer" className="link">
-        CONTACT
-      </HashLink>
-    </nav>
+    <HeaderContainer.Nav>
+      {/* {createLink('about-me', 'ABOUT ME')} */}
+      <HeaderContainer.HashLink to="/#projects">PROJECTS</HeaderContainer.HashLink>
+      <HeaderContainer.Name>DÉBORA SILVEIRA</HeaderContainer.Name>
+      {/* {createLink('CV', 'CV')} */}
+      <HeaderContainer.HashLink to="/#footer">CONTACT</HeaderContainer.HashLink>
+    </HeaderContainer.Nav>
   );
 
   const createNavForMobileAndTablet = () => (
@@ -58,10 +52,10 @@ const Header = () => {
   );
 
   return (
-    <header>
+    <HeaderContainer>
       {isDesktop && createNavForDesktop()}
       {isMobileOrTablet && createNavForMobileAndTablet()}
-    </header>
+    </HeaderContainer>
   );
 };
 
