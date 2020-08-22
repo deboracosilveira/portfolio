@@ -1,67 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
-import { Dropdown } from 'react-bootstrap';
-
+// import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-
-import './Header.css';
+import HeaderContainer from './styles';
 
 const Header = () => {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 800px)' });
-  const isDesktop = useMediaQuery({
-    query: '(min-width: 800px)',
-  });
+  const isDesktop = useMediaQuery({ query: '(min-width: 800px)' });
 
-  const createLink = (path, label) => (
-    <Link to={`/${path}`} className="link">
-      {label}
-    </Link>
-  );
+  // const createLink = (path, label) => (
+  //   <HeaderContainer.Link to={`/${path}`}>{label}</HeaderContainer.Link>
+  // );
 
   const createNavForDesktop = () => (
-    <nav>
-      {createLink('about-me', 'ABOUT ME')}
-      {/* {createLink('#projects', 'PROJECTS')} */}
-      <HashLink to="/#projects" className="link">
-        PROJECTS
-      </HashLink>
-      <h1 className="name-title">DÉBORA SILVEIRA</h1>
-      {createLink('CV', 'CV')}
-      <HashLink to="/#footer" className="link">
-        CONTACT
-      </HashLink>
-    </nav>
+    <React.Fragment>
+      {/* {createLink('about-me', 'ABOUT ME')} */}
+      <HeaderContainer.HashLink to="/#projects">PROJECTS</HeaderContainer.HashLink>
+      <HeaderContainer.Name>DÉBORA SILVEIRA</HeaderContainer.Name>
+      {/* {createLink('CV', 'CV')} */}
+      <HeaderContainer.HashLink to="/#footer">CONTACT</HeaderContainer.HashLink>
+    </React.Fragment>
   );
 
   const createNavForMobileAndTablet = () => (
-    <nav>
-      <h1 className="name-title">DÉBORA SILVEIRA</h1>
-      <Dropdown>
-        <Dropdown.Toggle variant="Secondary" className="dropdown-toggle"></Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item href="/about-me" className="dropdown-item">
-            ABOUT ME
-          </Dropdown.Item>
-          <Dropdown.Item href="/#projects" className="dropdown-item">
-            PROJECTS
-          </Dropdown.Item>
-          <Dropdown.Item href="/CV" className="dropdown-item">
-            CV
-          </Dropdown.Item>
-          <Dropdown.Item href="/#footer" className="dropdown-item">
-            CONTACT
-          </Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-    </nav>
+    <React.Fragment>
+      <HeaderContainer.Name>DÉBORA SILVEIRA</HeaderContainer.Name>
+      <HeaderContainer.Dropdown>
+        <HeaderContainer.Dropdown.Toggle variant="Secondary"></HeaderContainer.Dropdown.Toggle>
+        <HeaderContainer.Dropdown.Menu>
+          <HeaderContainer.Dropdown.Item href="/#projects">PROJECTS</HeaderContainer.Dropdown.Item>
+          <HeaderContainer.Dropdown.Item href="/#footer">CONTACT</HeaderContainer.Dropdown.Item>
+        </HeaderContainer.Dropdown.Menu>
+      </HeaderContainer.Dropdown>
+    </React.Fragment>
   );
 
   return (
-    <header>
-      {isDesktop && createNavForDesktop()}
-      {isMobileOrTablet && createNavForMobileAndTablet()}
-    </header>
+    <HeaderContainer>
+      <HeaderContainer.Nav>
+        {isDesktop && createNavForDesktop()}
+        {isMobileOrTablet && createNavForMobileAndTablet()}
+      </HeaderContainer.Nav>
+    </HeaderContainer>
   );
 };
 

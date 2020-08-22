@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { BackgroundBox } from '../../../../BackgroundBox/BackgroundBox';
-import { Button } from '../../../../Button/Button';
+import { BackgroundBox, Button } from '../../../../components';
 
 export const MainBannerContainer = styled.section`
   display: flex;
