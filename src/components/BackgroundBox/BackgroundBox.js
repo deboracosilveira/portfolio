@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 export const BackgroundBox = styled.div`
   background-color: var(--grayMedium);
-  width: 35vw;
   height: 35vw;
-  position: relative;
   left: 5%;
+  position: relative;
+  width: 35vw;
 
   @media (max-width: 800px) {
-    left: 10%;
-    width: 70vw;
     height: 70vw;
+    left: 10%;
     margin-bottom: 20%;
+    width: 70vw;
   }
 `;
