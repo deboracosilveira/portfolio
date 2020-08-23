@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BackgroundBox = styled.div`
+const BackgroundBox = styled.div`
   background-color: var(--grayMedium);
   height: 35vw;
   left: 5%;
@@ -14,3 +14,6 @@ export const BackgroundBox = styled.div`
     width: 70vw;
   }
 `;
+
+
+export default BackgroundBox;

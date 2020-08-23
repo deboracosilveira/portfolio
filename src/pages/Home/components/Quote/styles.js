@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import backgroundCurve from '../../../../../assets/img/background-curve.svg';
+import backgroundCurve from '../../../../assets/img/background-curve.svg'
 
 export const QuoteContainer = styled.div`
   align-items: center;

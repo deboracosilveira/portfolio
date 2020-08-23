@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProjectsContainer } from './styles';
-import example from '../../../../../assets/img/example.png';
+import example from '../../../../assets/img/example.png';
 
 const Projects = () => {
   return (
