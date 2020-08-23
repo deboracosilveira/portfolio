@@ -1,6 +1,6 @@
 import React from 'react';
 import { TechBannerContainer, TechBannerImage, TechBox, TechBannerBackgroundBox } from './styles';
-import TechImage from '../../../../../assets/img/larisa-birta-unsplash.jpg';
+import TechImage from '../../../../assets/img/larisa-birta-unsplash.jpg';
 
 const MainBanner = () => {
   return (

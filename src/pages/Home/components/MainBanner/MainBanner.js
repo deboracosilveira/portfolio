@@ -1,7 +1,7 @@
 import React from 'react';
 import { MainBannerContainer, MainBannerImage, WelcomeBox } from './styles';
 import { BackgroundBox } from '../../../../components';
-import MyImage from '../../../../../assets/img/deboraSilveira.jpg';
+import MyImage from '../../../../assets/img/deboraSilveira.jpg';
 
 const MainBanner = () => {
   return (

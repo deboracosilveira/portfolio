@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+const Button = styled.button`
   /* display: inline-block; */
   background-color: var(--grayHeavy);
   border-radius: 5px;
@@ -26,3 +26,5 @@ export const Button = styled.button`
     width: 30vw;
   }
 `;
+
+export default Button;
